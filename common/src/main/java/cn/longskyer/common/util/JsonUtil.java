@@ -65,6 +65,12 @@ public class JsonUtil {
         return t;
     }
     
+    public static String list2Json(List<?> list) {
+        Gson gson = new Gson();
+        String jsonString = gson.toJson(list);
+        return jsonString;
+    }
+    
     public static <T> List<T> json2List(String json, Class<T> cls) {
         Gson gson = new Gson();
         List<T> list = new ArrayList<T>();
