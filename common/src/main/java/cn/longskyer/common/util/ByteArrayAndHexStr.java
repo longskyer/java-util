@@ -3,7 +3,7 @@ package cn.longskyer.common.util;
 /**   
  * @ClassName:  ByteArrayAndHexStr   
  * @Description:TODO  字节数组和16进制字符串的互相转换
- * @author: 黄飞龙 2503802889@qq.com
+ * @author: longskyer 2503802889@qq.com
  * @date:   2018年7月7日 上午9:01:07        
  */
 public class ByteArrayAndHexStr {

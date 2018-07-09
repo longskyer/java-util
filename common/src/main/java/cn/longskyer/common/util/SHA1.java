@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 /**   
  * @ClassName:  SHA1   
  * @Description:TODO sha1算法加密字符串，无法从加密字符串还原出明文
- * @author: 黄飞龙 2503802889@qq.com
+ * @author: longskyer 2503802889@qq.com
  * @date:   2018年7月7日 上午9:16:20        
  */
 public class SHA1 {

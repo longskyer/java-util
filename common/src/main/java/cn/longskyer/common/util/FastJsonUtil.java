@@ -9,7 +9,7 @@ import com.alibaba.fastjson.TypeReference;
 /**   
  * @ClassName:  FastJsonUtil   
  * @Description:fastjson封装的json工具类 
- * @author: 黄飞龙 2503802889@qq.com
+ * @author: longskyer 2503802889@qq.com
  * @date:   2018年7月6日 下午4:26:48        
  */
 public class FastJsonUtil {

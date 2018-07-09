@@ -13,14 +13,14 @@ public class Pager {
 	private long totalRow; // 总记录数
 	private int limit = 10; // 每页显示数量
 	private Map<Object, Object> queryConditions = new HashMap<Object, Object>(); // 查询条件
-	private List<Object> list;  //查询数据/当前页的数据
+	private List<Object> rows;  //查询数据/当前页的数据
  
-	public List<Object> getList() {
-		return list;
+	public List<Object> getRows() {
+		return rows;
 	}
  
-	public void setList(List<Object> list) {
-		this.list = list;
+	public void setRows(List<Object> rows) {
+		this.rows = rows;
 	}
  
 	public int getStart() {

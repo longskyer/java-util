@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -152,7 +151,7 @@ public class HttpUtil {
      * @return: void      
      * @throws   
      */
-    public static void _postAsynUpload(String url, File file, String fileName) {
+    private void _postAsynUpload(String url, File file, String fileName) {
         //创建RequestBody 封装file参数
         RequestBody fileBody = RequestBody.create(MediaType.parse("application/octet-stream"), file);
         //创建RequestBody 设置类型等
@@ -184,7 +183,7 @@ public class HttpUtil {
      * @return: void      
      * @throws   
      */
-    public static void _postAsynJson(String url, String jsonParams, Callback callback) {
+    private void _postAsynJson(String url, String jsonParams, Callback callback) {
         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), jsonParams);
         Request request = new Request.Builder().url(url).post(requestBody).build();
         Call call = getInstance().okHttpClient.newCall(request);
@@ -249,6 +248,10 @@ public class HttpUtil {
         return getInstance()._getSyn(url);
     }
 
+    public static Response postSyn(String url,Map<String, String> params,Callback callback ) throws IOException
+    {
+        return getInstance()._postSyn(url,params,callback);
+    }
 
     public static String getSynString(String url) throws IOException
     {
@@ -260,17 +263,21 @@ public class HttpUtil {
         getInstance()._getAsyn(url, callback);
     }
 
-    public static Response postSyn(String url,Map<String, String> params,Callback callback ) throws IOException
-    {
-        return getInstance()._postSyn(url,params,callback);
-    }
-
-
     public static void postAsyn(String url,  Map<String, String> params,Callback callback)
     {
         getInstance()._postAsyn(url, params, callback);
     }
+    
+    public static void postAsynUpload(String url, File file, String fileName) {
+    	getInstance()._postAsynUpload(url, file, fileName);
+    }
 
+    public static void postAsynJson(String url, String jsonParams, Callback callback) {
+    	getInstance()._postAsynJson(url, jsonParams, callback);
+    }
+    public static void downloadAsyn(final String url, final String destFileDir, final Callback callback) {
+    	getInstance()._downloadAsyn(url, destFileDir, callback);
+    }
     //****************************对外公布的方法由此 结束（未完整，待补充）************
 
 }

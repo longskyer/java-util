@@ -7,7 +7,7 @@ import java.util.Properties;
 /**   
  * @ClassName:  SystemInfoUtil   
  * @Description:TODO  获取系统信息工具类
- * @author: 黄飞龙 2503802889@qq.com
+ * @author: longskyer 2503802889@qq.com
  * @date:   2018年7月6日 下午4:51:18        
  */
 public class SystemInfoUtil {
